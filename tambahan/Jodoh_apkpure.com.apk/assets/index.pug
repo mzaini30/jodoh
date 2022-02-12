@@ -1,0 +1,33 @@
+mixin css(x)
+  link(rel="stylesheet" href=`vendor/${x}`)
+mixin js(x)
+  script(src=`vendor/${x}`)
+mixin icon(x)
+  div(class=`glyphicon glyphicon-${x}`)
+
+doctype html
+html
+  head
+    title Jodoh
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    +css("bootstrap/css/bootstrap.min.css")
+    +css("zen/style.css")
+  body
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          .navbar-toggle.collapsed(data-toggle="collapse" data-target="#isi-menu")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          .navbar-brand Jodoh
+        .collapse.navbar-collapse#isi-menu
+          ul.nav.navbar-nav
+            li: a(href="https://play.google.com/store/apps/details?id=com.mzaini30.jodoh") Kasih bintang 5
+            li: a(href="https://play.google.com/store/apps/dev?id=5401138465689796048") Aplikasi lainnya
+    .container
+      include include/isi.pug
+    +js("jquery/jquery.min.js")
+    +js("bootstrap/js/bootstrap.min.js")
+    +js("zen/app.js")

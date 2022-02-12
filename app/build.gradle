@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.mzaini30.mytasks"
+        applicationId "com.mzaini30.jodoh"
         minSdkVersion 15
         targetSdkVersion 30
         versionCode 2
